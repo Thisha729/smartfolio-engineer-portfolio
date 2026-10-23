@@ -35,20 +35,39 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  font-size: 1.05rem;
-  font-weight: 700;
+  font-size: 1.35rem;
+  font-weight: 800;
   color: #111827;
   margin-right: auto;
-  font-family: 'Fira Code', monospace;
+  font-family: 'Inter', sans-serif;
   transition: all 0.25s;
-  padding: 0.35rem 0.8rem;
+  padding: 0.4rem 1rem;
   border-radius: 10px;
   flex-shrink: 0;
   text-decoration: none;
+  letter-spacing: -0.01em;
 }
 .logo:hover { background: rgba(79,142,247,0.08); border-color: rgba(79,142,247,0.3); }
 .accent { color: var(--accent); }
 .pro    { color: var(--accent-secondary); }
+
+/* Miss./Mr. title prefix */
+.title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #6b7280;
+  letter-spacing: 0.03em;
+  font-style: italic;
+}
+
+/* Smaller title for mobile panel */
+.titleSmall {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #9ca3af;
+  letter-spacing: 0.03em;
+  font-style: italic;
+}
 
 /* ── Desktop nav ── */
 .links {

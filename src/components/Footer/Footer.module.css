@@ -137,3 +137,14 @@
     text-align: left;
   }
 }
+
+/* Name styles */
+.accent     { color: var(--accent); }
+.pro        { color: var(--accent-secondary); }
+.titleSmall {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.03em;
+  font-style: italic;
+}

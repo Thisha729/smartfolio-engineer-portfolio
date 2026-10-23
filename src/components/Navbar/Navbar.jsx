@@ -69,7 +69,7 @@ export default function Navbar() {
         <div className={styles.container}>
           {/* Logo */}
           <button className={styles.logo} onClick={() => handleNavClick('#home')}>
-            <span>Eng<span className={styles.accent}>Tech</span><span className={styles.pro}>.Pro</span></span>
+            <span><span className={styles.title}>Miss.</span> <span className={styles.accent}>PRIYA</span><span className={styles.pro}> SHARMA</span></span>
           </button>
 
           {/* Desktop links */}
@@ -128,7 +128,7 @@ export default function Navbar() {
               {/* Header row inside panel */}
               <div className={styles.panelHeader}>
                 <span className={styles.panelLogo}>
-                  Eng<span className={styles.accent}>Tech</span><span className={styles.pro}>.Pro</span>
+                  <span className={styles.titleSmall}>Miss.</span> <span className={styles.accent}>PRIYA</span><span className={styles.pro}> SHARMA</span>
                 </span>
                 <button
                   className={styles.closeBtn}

@@ -23,7 +23,7 @@ export default function Footer() {
       <div className={styles.container}>
         <div className={styles.top}>
           <div className={styles.brand}>
-            <span>Eng<span className={styles.accent}>Tech</span><span className={styles.pro}>.Pro</span></span>
+            <span><span className={styles.titleSmall}>Miss.</span> <span className={styles.accent}>PRIYA</span><span className={styles.pro}> SHARMA</span></span>
           </div>
           <p className={styles.tagline}>{personalInfo.tagline}</p>
         </div>
