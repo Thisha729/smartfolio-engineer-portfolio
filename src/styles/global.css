@@ -1,0 +1,100 @@
+/* ===== CSS Variables ===== */
+:root {
+  /* Accent colors */
+  --accent: #4f8ef7;
+  --accent-secondary: #38d9b4;
+  --accent-hover: #3a7be0;
+
+  /* Backgrounds — dark with a soft white-tinted lift */
+  --bg-primary:   #0d1117;
+  --bg-secondary: #111827;
+  --bg-card:      #161f2e;
+  --bg-elevated:  #1c2a3a;
+
+  /* Card surfaces */
+  --card-bg:       rgba(255, 255, 255, 0.055);
+  --card-bg-hover: rgba(255, 255, 255, 0.09);
+
+  /* Borders — soft white with more visibility */
+  --card-border:       rgba(255, 255, 255, 0.13);
+  --card-border-hover: rgba(79, 142, 247, 0.5);
+  --border-subtle:     rgba(255, 255, 255, 0.07);
+
+  /* Text — slightly warmer white */
+  --text-primary:   #eef2ff;
+  --text-secondary: rgba(215, 225, 255, 0.75);
+  --text-muted:     rgba(170, 185, 215, 0.48);
+}
+
+/* ===== Reset ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(79, 142, 247, 0.35);
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* ===== Selection ===== */
+::selection {
+  background: rgba(79, 142, 247, 0.3);
+  color: #fff;
+}
+
+/* ===== Focus visible ===== */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.app {
+  min-height: 100vh;
+}

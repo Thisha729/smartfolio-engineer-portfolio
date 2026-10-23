@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="60%">
+      <stop offset="0%"   stop-color="#1a2e50"/>
+      <stop offset="100%" stop-color="#0a1628"/>
+    </radialGradient>
+    <radialGradient id="bodyGrad" cx="50%" cy="30%" r="70%">
+      <stop offset="0%"   stop-color="#2a4a7a"/>
+      <stop offset="100%" stop-color="#0f2040"/>
+    </radialGradient>
+    <radialGradient id="faceGrad" cx="50%" cy="40%" r="55%">
+      <stop offset="0%"   stop-color="#d4956a"/>
+      <stop offset="100%" stop-color="#b87040"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="circle">
+      <circle cx="150" cy="150" r="150"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <circle cx="150" cy="150" r="150" fill="url(#bgGrad)"/>
+
+  <!-- Grid lines -->
+  <g opacity="0.08" stroke="#4f8ef7" stroke-width="1">
+    <line x1="0" y1="60"  x2="300" y2="60"/>
+    <line x1="0" y1="120" x2="300" y2="120"/>
+    <line x1="0" y1="180" x2="300" y2="180"/>
+    <line x1="0" y1="240" x2="300" y2="240"/>
+    <line x1="60"  y1="0" x2="60"  y2="300"/>
+    <line x1="120" y1="0" x2="120" y2="300"/>
+    <line x1="180" y1="0" x2="180" y2="300"/>
+    <line x1="240" y1="0" x2="240" y2="300"/>
+  </g>
+
+  <!-- Circuit traces -->
+  <g clip-path="url(#circle)">
+    <path d="M10 200 H60 V160 H110 V200 H180 V140 H240" stroke="rgba(79,142,247,0.2)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M10 240 H50 V270 H120 V240 H200 V280 H280" stroke="rgba(56,217,180,0.15)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Body / suit -->
+    <ellipse cx="150" cy="310" rx="100" ry="80" fill="url(#bodyGrad)"/>
+    <!-- Collar / shirt -->
+    <path d="M120 255 Q150 275 180 255 L190 310 H110 Z" fill="#1e3a6a"/>
+    <!-- Tie -->
+    <path d="M145 258 L150 310 L155 258 L152 252 L148 252 Z" fill="#4f8ef7" opacity="0.8"/>
+
+    <!-- Neck -->
+    <rect x="135" y="220" width="30" height="40" rx="8" fill="url(#faceGrad)"/>
+
+    <!-- Head -->
+    <ellipse cx="150" cy="185" rx="48" ry="52" fill="url(#faceGrad)"/>
+
+    <!-- Hair -->
+    <path d="M102 175 Q105 130 150 128 Q195 130 198 175 Q195 150 150 148 Q105 150 102 175 Z" fill="#2a1a0a"/>
+
+    <!-- Eyes -->
+    <ellipse cx="133" cy="182" rx="7" ry="8" fill="white"/>
+    <ellipse cx="167" cy="182" rx="7" ry="8" fill="white"/>
+    <circle  cx="135" cy="183" r="4.5" fill="#1a2a4a"/>
+    <circle  cx="169" cy="183" r="4.5" fill="#1a2a4a"/>
+    <circle  cx="136" cy="181" r="1.5" fill="white"/>
+    <circle  cx="170" cy="181" r="1.5" fill="white"/>
+
+    <!-- Eyebrows -->
+    <path d="M124 172 Q133 168 142 172" stroke="#2a1a0a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M158 172 Q167 168 176 172" stroke="#2a1a0a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Nose -->
+    <path d="M147 188 Q145 200 148 203 Q152 205 155 203 Q158 200 153 188" stroke="rgba(0,0,0,0.15)" stroke-width="1.5" fill="none"/>
+
+    <!-- Smile -->
+    <path d="M137 210 Q150 220 163 210" stroke="rgba(0,0,0,0.2)" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+    <!-- Ears -->
+    <ellipse cx="102" cy="188" rx="8" ry="10" fill="url(#faceGrad)"/>
+    <ellipse cx="198" cy="188" rx="8" ry="10" fill="url(#faceGrad)"/>
+  </g>
+
+  <!-- Glowing dots (animated) -->
+  <circle cx="240" cy="60"  r="3" fill="rgba(79,142,247,0.9)" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.9;0.2;0.9" dur="2.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="60"  cy="180" r="3" fill="rgba(56,217,180,0.9)" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.2;0.9;0.2" dur="3.1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="50"  cy="70"  r="2" fill="rgba(79,142,247,0.7)">
+    <animate attributeName="opacity" values="0.7;0.1;0.7" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="250" cy="220" r="2" fill="rgba(56,217,180,0.7)">
+    <animate attributeName="opacity" values="0.1;0.7;0.1" dur="2.8s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Bottom glow -->
+  <ellipse cx="150" cy="285" rx="90" ry="20" fill="rgba(79,142,247,0.12)"/>
+</svg>
